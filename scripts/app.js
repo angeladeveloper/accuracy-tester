@@ -1,26 +1,58 @@
 const timer = document.querySelector('#timer');
-const randomWordEle = document.querySelector('#random-word');
+const randomWordEle = document.getElementById("random-word");
 const userInputIEle = document.querySelector('#user-guess');
+const nextBtn = document.querySelector('#btn');
 
 
+//this is a place holder until i want to use the real api, essientally calls a fake word
+const randomindex = Math.floor(Math.random() * 100)
+var randomWords = require('random-words');
+console.log(randomWords());
+
+
+
+//btn to start the game
+nextBtn.addEventListener('click', e => {
+    e.preventDefault()
+    getRandomWordCall(); // how to go to next? 
+    getUserGuess();
+})
 //make api call and grab random word
 function getRandomWordCall() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    const randomURL = `https://jsonplaceholder.typicode.com/posts/${randomindex}`
+
+    fetch(randomURL)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             const randomWord = data.title;
-            console.log(randomWord);
             displayRandomWord(randomWord);
-
         })
         .catch('error')
- 
 }
-
+// get random word and store in local storage
 function displayRandomWord(word) {
-    console.log(word);
     randomWordEle.innerText = word
+    localStorage.setItem("randomWord", word)
+}
+// get the users guess - add event listener? 
+function getUserGuess() {
+    const userGuess = userInputIEle.value
+    console.log(userGuess);
+    compareWords(userGuess);
 }
 
-getRandomWordCall();
+// compare the words
+//get the random word from storage
+function compareWords(userWord, randomWord) {
+    randomWord = localStorage.getItem('randomWord');
+    randomWord = randomWord.toUpperCase();
+    userWord = userWord.toUpperCase();
+    if (randomWord === userWord) {
+        console.log("YOU WIN!");
+    } else {
+        console.log("YOU LOSE!");
+
+    }
+}
+
+
