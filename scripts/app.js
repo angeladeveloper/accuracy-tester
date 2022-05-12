@@ -6,8 +6,7 @@ const nextBtn = document.querySelector('#btn');
 let userScore = 0;
 //this is a place holder until i want to use the real api, essientally calls a fake word
 const randomindex = Math.floor(Math.random() * 100)
-var randomWords = require('random-words');
-console.log(randomWords());
+
 
 
 
@@ -24,6 +23,7 @@ function getRandomWordCall() {
     fetch(randomURL)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             const randomWord = data.title;
             displayRandomWord(randomWord);
         })
