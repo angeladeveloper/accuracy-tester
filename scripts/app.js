@@ -46,11 +46,13 @@ function compareWords(userWord, randomWord) {
     if (randomWord === userWord) {
         console.log("YOU WIN!");
         userScore++;
+        document.getElementById('final-score').innerText = userScore
         // add score here
     } else {
         console.log("YOU LOSE!");
 
     }
+    randomindex = Math.floor(Math.random() * 100)
 
 }
 
