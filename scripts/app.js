@@ -2,24 +2,20 @@ const timer = document.querySelector('#timer');
 const randomWordEle = document.getElementById("random-word");
 const userInputIEle = document.querySelector('#user-guess');
 const nextBtn = document.querySelector('#btn');
-console.log(password)
+
 let userScore = 0;
 //this is a place holder until i want to use the real api, essientally calls a fake word
-const randomindex = Math.floor(Math.random() * 100)
-
-
-
-
+let randomindex = Math.floor(Math.random() * 100)
 //btn to start the game
 nextBtn.addEventListener('click', e => {
     e.preventDefault()
-    getRandomWordCall(); // how to go to next? 
+    userInputIEle.innerText = ""
+    getRandomWordCall();
     getUserGuess();
 })
 //make api call and grab random word
 function getRandomWordCall() {
-    const randomURL = `https://jsonplaceholder.typicode.com/posts/${randomindex}`
-
+    let randomURL = `https://jsonplaceholder.typicode.com/posts/${randomindex}`
     fetch(randomURL)
         .then(response => response.json())
         .then(data => {
@@ -29,8 +25,6 @@ function getRandomWordCall() {
             // searchRandomPic(randomWord);
         })
         .catch('error')
-
-
 }
 // get random word and store in local storage
 function displayRandomWord(word) {
@@ -43,7 +37,6 @@ function getUserGuess() {
     console.log(userGuess);
     compareWords(userGuess);
 }
-
 // compare the words
 //get the random word from storage
 function compareWords(userWord, randomWord) {
@@ -58,6 +51,7 @@ function compareWords(userWord, randomWord) {
         console.log("YOU LOSE!");
 
     }
+
 }
 
 
