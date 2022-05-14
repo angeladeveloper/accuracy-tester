@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accuracry tester </title>
+    <script src="/secret.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./resources/css/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="text/css" href="./resources/css/normalize.css"> -->
     <link rel="stylesheet" type="text/css" href="./scripts/style.css">
-    <title>Coding Quiz</title>
 </head>
 
 <body>
@@ -25,6 +28,13 @@
             </div>
 
         </header>
+
+
+    <label for="user-guess">How do you spell ...</label>
+    <input type="text" id="user-guess">
+    <button type="submit" id="btn" >
+        Next
+    </button>
 
         <!-- Coding Challenge Title - start page -->
         <section id="title-section" class="show">
@@ -44,6 +54,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Coding questions -->
         <section id="quiz-section" class="">
