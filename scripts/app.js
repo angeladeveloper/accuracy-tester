@@ -2,7 +2,7 @@ const timer = document.querySelector('#timer');
 const randomWordEle = document.getElementById("random-word");
 const userInputIEle = document.querySelector('#user-guess');
 const nextBtn = document.querySelector('#btn');
-
+console.log(password)
 let userScore = 0;
 //this is a place holder until i want to use the real api, essientally calls a fake word
 const randomindex = Math.floor(Math.random() * 100)
