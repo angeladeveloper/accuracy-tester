@@ -26,8 +26,11 @@ function getRandomWordCall() {
             console.log(data);
             const randomWord = data.title;
             displayRandomWord(randomWord);
+            // searchRandomPic(randomWord);
         })
         .catch('error')
+
+
 }
 // get random word and store in local storage
 function displayRandomWord(word) {
