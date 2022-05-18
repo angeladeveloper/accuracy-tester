@@ -62,8 +62,12 @@ function compareWords(userWord, randomWord) {
         correctGuess()
         // add score here
     } else {
-        console.log("YOU LOSE!");
+
+        window.clearInterval(update);
+        return window.location.assign('high-score.html')
+
         wrongGuess()
+
     }
     console.log(userGuessTotal);
     stopGame();
