@@ -49,7 +49,8 @@ function compareWords(userWord, randomWord) {
         // add score here
     } else {
         console.log("YOU LOSE!");
-
+        window.clearInterval(update);
+        return window.location.assign('high-score.html')
     }
 
 }
