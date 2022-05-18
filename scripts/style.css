@@ -1,40 +1,138 @@
 /* Hiding sections minus title */
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    background-color: grey;
+:root {
+  --primary-clr: #67eac3;
 }
 
-section{
-    background-color: white;
-    border: solid 2px black;
-    padding: 10px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  background-color: grey;
+}
+
+header {
+  background-color: var(--primary-clr);
+  margin: 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  height: 80vh;
+  background-color: white;
+  border: solid 2px black;
+  padding: 10px;
 }
 .hide {
-    display: none;
+  visibility: hidden;
 }
 
 .show {
-    display: block;
+  display: block;
 }
-h1{
-    text-align: center;
-}
-
-p{
-    padding: 0 10%;
+h1 {
+  text-align: center;
 }
 
-#startButton{
-    display: block;
-    margin: 0 auto;
+p {
+  padding: 0 10%;
 }
 
-.choice{
-    display: block;
-    margin-top: 10px;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 350px;
+}
+
+#startButton {
+  display: block;
+  margin: 0 auto;
+}
+
+.choice {
+  display: block;
+  margin-top: 10px;
 }
 #Increase {
-    font-size: 50px;
-    text-align: center;
+  font-size: 50px;
+  text-align: center;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: #8cfdd9;
+  color: #391101;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  border-radius: 4px;
+  transition: all 300ms ease;
+}
+input:focus {
+  background: rgb(219, 236, 251);
+}
+.wrong {
+  background-color: rgb(155, 42, 64);
+}
+.correct {
+  background-color: rgb(70, 242, 144);
+}
+
+.neutral {
+  /* background-color: aliceblue; */
+}
+
+img {
+  width: 90px;
+}
+
+.score {
+  display: flex;
+  position: absolute;
+  /* top: 50; */
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--primary-clr);
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.score:hover {
+  background-color: #ed9a00;
+  color: white;
+  /* transform: scale(1.1); */
+  box-shadow: 0 0 10px #f4c700;
+}
+
+.score img {
+  margin: 0 20px 0 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: var(--primary-clr);
+  padding: 0.5rem 1.2rem;
+  margin-top: 3px;
+  border-radius: 6px;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  background-color: #ed9a00;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #f4c700;
+}
+
+button:focus {
+  outline: 0;
 }
