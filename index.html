@@ -45,13 +45,13 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p id="Increase" class="random-word">Spelling Game!</p>
+                    <p id="Increase" class="random-word"><span>➡️</span> Spelling Game! <span>⬅️</span> </p>
                 </div>
             </div>
         </header>
             <div class="row">
                 <div class="col-md-12">
-                    <button id="startButton">Start Quiz</button>
+                    <button id="startButton" class="start-button">Start Quiz</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
         <label id="input-label" for="user-guess"></label>
         <!-- <span id="random-word"></span> -->
         <input type="text" id="user-guess">
-        <button type="submit" id="btn" >
+        <button type="submit" id="btn" class="hide">
             Next
         </button>
     </div>
@@ -102,6 +102,19 @@
                 </div>
             </div>
         </section>
+        <div class="rules">
+            <h3>RULES</h3>
+            <p>👉 START and a random word will apear, but look quick!👀 It will disapear soon. ⌛</p>
+            <p>I hope you remembered how to spell it!🧠</p>
+            <select name="difficulty" id="diff-select">
+                <option value="4">EASY - 4 letters</option>
+                <option value="5">EASY - 5 letters</option>
+                <option value="6">MEDIUM - 6 letters</option>
+                <option value="7">MEDIUM - 7 letters</option>
+                <option value="8">HARD - 8 letters</option>
+                <option value="9">EXPERT - 9 letters</option>
+            </select>
+        </div>
 </body>
 
 </html>

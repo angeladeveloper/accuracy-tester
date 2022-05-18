@@ -3,25 +3,36 @@ const randomWordEle = document.querySelector(".random-word");
 const userInputIEle = document.querySelector('#user-guess');
 const nextBtn = document.querySelector('#btn');
 const startBtn = document.querySelector('#startButton')
+const difficultSelect = document.querySelector("select")
+let diff = 4
+
 let userScore = 0;
 let userGuessTotal = 0;
 
 startBtn.addEventListener("click", () => {
     userScore = 0;
-    getRandomWordCall();
+    getDifficulty()
+    nextBtn.classList.remove("hide");
 })
 
 
 nextBtn.addEventListener('click', e => {
     e.preventDefault()
     userInputIEle.innerText = " "
-    getRandomWordCall();
+    getDifficulty()
     getUserGuess();
 })
 
-function getRandomWordCall() {
+function getDifficulty() {
+    diff = difficultSelect.value
+    getRandomWordCall(diff);
+    console.log(diff);
+
+}
+
+function getRandomWordCall(length) {
     startBtn.style.visibility = "hidden"
-    let randomURL = "https://random-word-api.herokuapp.com/word?length=7"
+    let randomURL = `https://random-word-api.herokuapp.com/word?length=${length}`
     fetch(randomURL)
         .then(response => response.json())
         .then(data => {
@@ -32,13 +43,27 @@ function getRandomWordCall() {
         })
         .catch('error')
 }
-// get random word and store in local storage
+// function getRandomWordCall() {
+//     startBtn.style.visibility = "hidden"
+//     let randomURL = "https://random-word-api.herokuapp.com/word?length=7"
+//     fetch(randomURL)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             const randomWord = data;
+//             displayRandomWord(randomWord);
+//             // searchRandomPic(randomWord);
+//         })
+//         .catch('error')
+// }
+
+//I wanted emojis ⬅️🤷🏽‍♂️
 function displayRandomWord(word) {
     localStorage.setItem("randomWord", word)
-    randomWordEle.innerText = word
+    randomWordEle.innerText = `➡️ ${word} ⬅️`
     setTimeout(() => {
         randomWordEle.innerText = "❓❔❓"
-    }, 1000)
+    }, 2000)
 
 }
 // get the users guess - add event listener? 
