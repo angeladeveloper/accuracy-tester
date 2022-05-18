@@ -43,21 +43,8 @@ function getRandomWordCall(length) {
         })
         .catch('error')
 }
-// function getRandomWordCall() {
-//     startBtn.style.visibility = "hidden"
-//     let randomURL = "https://random-word-api.herokuapp.com/word?length=7"
-//     fetch(randomURL)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             const randomWord = data;
-//             displayRandomWord(randomWord);
-//             // searchRandomPic(randomWord);
-//         })
-//         .catch('error')
-// }
 
-//I wanted emojis ⬅️🤷🏽‍♂️
+//Display the word for set time- I wanted emojis ⬅️🤷🏽‍♂️
 function displayRandomWord(word) {
     localStorage.setItem("randomWord", word)
     randomWordEle.innerText = `➡️ ${word} ⬅️`
@@ -66,14 +53,16 @@ function displayRandomWord(word) {
     }, 2000)
 
 }
-// get the users guess - add event listener? 
+// Get the users guess
 function getUserGuess() {
     const userGuess = userInputIEle.value
     console.log(userGuess);
     compareWords(userGuess);
 }
-// compare the words
-//get the random word from storage
+
+
+// Compare the words
+// Get the random word from storage
 function compareWords(userWord, randomWord) {
     userGuessTotal++;
     randomWord = localStorage.getItem('randomWord');
@@ -87,10 +76,8 @@ function compareWords(userWord, randomWord) {
         correctGuess()
         // add score here
     } else {
-
-        window.clearInterval(update);
-        return window.location.assign('high-score.html')
-
+        // window.clearInterval(update);
+        // return window.location.assign('high-score.html')
         wrongGuess()
 
     }
@@ -100,8 +87,9 @@ function compareWords(userWord, randomWord) {
 
 // test test test
 function correctGuess() {
-    document.querySelector("#user-guess").classList.add("correct");
     document.querySelector("#input-label").innerText = "Correct ✅"
+    document.querySelector("#user-guess").classList.remove("wrong")
+    document.querySelector("#user-guess").classList.add("correct");
     setTimeout(() => {
         document.querySelector("#user-guess").classList.add("neutral")
         document.querySelector("#input-label").innerText = ""
