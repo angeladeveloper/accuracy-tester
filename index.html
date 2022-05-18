@@ -56,7 +56,7 @@
         </header>
             <div class="row">
                 <div class="col-md-12">
-                    <button id="startButton" class="start-button">Start Quiz</button>
+                    <!-- <button id="startButton" class="start-button">Start Quiz</button> -->
                 </div>
             </div>
 
@@ -64,14 +64,19 @@
         <span></span>
         <label id="input-label" for="user-guess"></label>
         <!-- <span id="random-word"></span> -->
-        <input type="text" id="user-guess">
-        <button type="submit" id="btn" class="hide">
+        <form action="">
+            <input type="text" id="user-guess" placeholder="Click Start!">
+            <button type="submit" id="btn" class="hide">
             Next
-        </button>
+            </button>
+        </form>
+        <button type="submit" id="what-button"class="hide">
+            What?
+            </button>
     </div>
 
     <div class="score">
-        <img src="spelling-bee.png" alt="https://www.flaticon.com/free-icons/kid-and-baby" title="kid and baby icons" >
+        <img src="spelling-bee.png" alt="https://www.flaticon.com/free-icons/kid-and-baby" title="kid and baby icons" id="image">
         <div >
             Score:<span id="final-score"></span>
         </div>
@@ -109,16 +114,22 @@
         </section>
         <div class="rules">
             <h3>RULES</h3>
-            <p>👉 START and a random word will apear, but look quick!👀 It will disapear soon. ⌛</p>
-            <p>I hope you remembered how to spell it!🧠</p>
+            <p><span>👆Start</span> and a random <span>word ✒️</span> will apear, but look <span>quick👀</span> and <span>listen close👂</span> It will disapear soon. <span>⏳</span></p>
+            <p>I hope you <span>remembered 🧠</span>  how to spell it!</p>
+            <small>You can hear the word again by 👆 <span class="what-rules">What?</span> </small>
+            <button id="startButton" class="start-button">Start Quiz</button>
             <select name="difficulty" id="diff-select">
                 <option value="4">EASY - 4 letters</option>
                 <option value="5">EASY - 5 letters</option>
-                <option value="6">MEDIUM - 6 letters</option>
+                <option value="6" selected="selected">MEDIUM - 6 letters</option>
                 <option value="7">MEDIUM - 7 letters</option>
                 <option value="8">HARD - 8 letters</option>
                 <option value="9">EXPERT - 9 letters</option>
             </select>
+        </div>
+        <div class="correct-words-list">
+            <div class="correct-words-title" id="correct-ul">Correct Words
+            </div>
         </div>
 </body>
 
