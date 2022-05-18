@@ -1,11 +1,13 @@
 const timer = document.querySelector('#timer');
-const randomWordEle = document.getElementById("random-word");
+const randomWordEle = document.querySelector(".random-word");
 const userInputIEle = document.querySelector('#user-guess');
 const nextBtn = document.querySelector('#btn');
 const startBtn = document.querySelector('#startButton')
 let userScore = 0;
+let userGuessTotal = 0;
 
 startBtn.addEventListener("click", () => {
+    userScore = 0;
     getRandomWordCall();
 })
 
@@ -18,6 +20,7 @@ nextBtn.addEventListener('click', e => {
 })
 
 function getRandomWordCall() {
+    startBtn.style.visibility = "hidden"
     let randomURL = "https://random-word-api.herokuapp.com/word?length=7"
     fetch(randomURL)
         .then(response => response.json())
@@ -34,7 +37,7 @@ function displayRandomWord(word) {
     localStorage.setItem("randomWord", word)
     randomWordEle.innerText = word
     setTimeout(() => {
-        randomWordEle.innerText = ""
+        randomWordEle.innerText = "❓❔❓"
     }, 1000)
 
 }
@@ -47,6 +50,7 @@ function getUserGuess() {
 // compare the words
 //get the random word from storage
 function compareWords(userWord, randomWord) {
+    userGuessTotal++;
     randomWord = localStorage.getItem('randomWord');
     randomWord = randomWord.toUpperCase();
     userWord = userWord.toUpperCase();
@@ -61,20 +65,33 @@ function compareWords(userWord, randomWord) {
         console.log("YOU LOSE!");
         wrongGuess()
     }
+    console.log(userGuessTotal);
+    stopGame();
 }
-
 
 // test test test
 function correctGuess() {
+    document.querySelector("#user-guess").classList.add("correct");
+    document.querySelector("#input-label").innerText = "Correct ✅"
     setTimeout(() => {
-        document.querySelector("#user-guess").classList.add("correct");
-        document.querySelector("#input-label").innerText = "Correct ✅"
-    }, 2000)
+        document.querySelector("#user-guess").classList.add("neutral")
+        document.querySelector("#input-label").innerText = ""
+    }, 1000)
 }
 
 function wrongGuess() {
+    document.querySelector("#input-label").innerText = "Wrong ⛔"
+    document.querySelector("#user-guess").classList.remove("correct");
+    document.querySelector("#user-guess").classList.add("wrong")
     setTimeout(() => {
-        document.querySelector("#user-guess").classList.add("wrong")
-        document.querySelector("#input-label").innerText = "Wrong ⛔"
-    }, 2000)
+        document.querySelector("#user-guess").classList.add("neutral")
+        document.querySelector("#input-label").innerText = ""
+    }, 1000)
+}
+
+function stopGame() {
+    if (userGuessTotal === 6) {
+        console.log("endGame");
+        displayHighscorePage();
+    }
 }

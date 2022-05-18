@@ -44,10 +44,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p id="Increase">Spelling Game!</p>
-                </div>
-                <div class="col-md-12">
-                    <p id="random-word">Spelling Game!</p>
+                    <p id="Increase" class="random-word">Spelling Game!</p>
                 </div>
             </div>
             <div class="row">
@@ -56,12 +53,19 @@
                 </div>
             </div>
 
-
-        <label id="input-label" for="user-guess">How do you spell ...</label>
+    <div class="input-container">
+        <span></span>
+        <label id="input-label" for="user-guess"></label>
+        <!-- <span id="random-word"></span> -->
         <input type="text" id="user-guess">
         <button type="submit" id="btn" >
             Next
         </button>
+    </div>
+
+    <div class="score"id="final-score">
+        Score:
+    </div>
     </section>
         <!-- Coding questions -->
         <section id="quiz-section" class="">
@@ -78,11 +82,11 @@
         <!-- Are the java ppl going to make this -->
 
         <!-- High Score section -->
-        <section id="highscore-section" class=>
+        <section id="highscore-section" class="hide">
             <div class="row">
                 <div id="high-score" class="col-md-12">
                     <h2>All done!</h2>
-                    <h3>Your final score is <span id="final-score">0</span></h3>
+                    <h3>Your final score is <span >0</span></h3>
                     <label for="initials-area">Enter initials:</label>
                     <input type="text" name="initials-area" maxlength="4" id="initials">
                     <button id="submit-button" type="submit">Submit</button>
