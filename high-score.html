@@ -22,37 +22,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Top fixed header (highscores and timer) -->
-        <header class="row">
-            <div class="col-md-6" id="Highscores">
-                <a href="./highScore.html">View Highscores</a>
-            </div>
-            <div class="col-md-6" id="timer">
-                Time: <span id="time">0</span>
-            </div>
-
-        </header>
-
-
-    <label for="user-guess">How do you spell ...</label>
-    <input type="text" id="user-guess">
-    <button type="submit" id="btn" >
-        Next
-    </button>
-
         <!-- Coding Challenge Title - start page -->
         <section id="title-section" class="show">
             <div class="row">
                 <div class="col-md-12">
-                    <p id="Increase">Spelling Game!</p>
+                    <p id="Increase">Highscores!</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button id="startButton">Start Quiz</button>
-                </div>
-            </div>
         </section>
 
 
@@ -74,11 +49,36 @@
         <section id="highscore-section" class=>
             <div class="row">
                 <div id="high-score" class="col-md-12">
-                    <h2>All done!</h2>
-                    <h3>Your final score is <span id="final-score">0</span></h3>
-                    <label for="initials-area">Enter initials:</label>
-                    <input type="text" name="initials-area" maxlength="4" id="initials">
-                    <button id="submit-button" type="submit">Submit</button>
+                    <h2>Scores!</h2>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </section>
