@@ -68,7 +68,34 @@ function getRandomWordCall(length) {
     displayCorrectWords(newWordArray);
 }
 
+// api for images
+function imagesearch(randomWord) {
+    const url = "https://api.pexels.com/v1/search?query="+randomWord+"&per_page=1";
+    fetch(url, {
+      method: "GET",
+      withCredentials: true,
+      headers: {
+        "Authorization": "563492ad6f91700001000001524417ab089d4a73998c49062467e805",
+        "Content-Type": "application/json"
+      }
+    })
+    .then(resp => resp.json())
+    .then(function(data) {
+        const photo = data.photos;
+        // displayimage(photo);
+        var randomImage = photo[0].src.original
+        console.log(randomImage)
+        document.querySelector('#image-container').innerHTML = `<img src=${randomImage} alt=${randomImage}>`
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+// get random word and store in local storage
+
+
 //Display the word for set time- I wanted emojis ⬅️🤷🏽‍♂️
+
 function displayRandomWord(word) {
 
     // setTimeout(() => {
