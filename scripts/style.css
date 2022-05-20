@@ -1,23 +1,21 @@
 /* Hiding sections minus title */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Life+Savers:wght@400;700;800&display=swap");
+
 :root {
-  --primary-clr: #67eac3;
-  --accent-clr: #cffff1;
+  --primary-clr: #9b6cd4;
 }
 
 body {
-  font-family: "Life Savers", cursive;
-  background-color: grey;
-  margin: 0;
-}
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  background-color: #595c69;
+  color: #fcfcfc;
 
 header {
   background-color: var(--primary-clr);
   margin: 1.3rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-}
+  box-shadow: 0 0 10px #595c69;
+
 
 section {
   position: relative;
@@ -25,10 +23,9 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-  height: 95vh;
-  background-color: rgb(185, 185, 185);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 40vh;
+  background-color: #595c69;
+
   padding: 10px;
 }
 .hide {
@@ -40,7 +37,11 @@ section {
 }
 h1 {
   text-align: center;
-  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-shadow: 0 0 5px #595c69;
+
 }
 
 p {
@@ -51,41 +52,38 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: center;
   text-align: center;
   height: 350px;
 }
 
-.input-container label {
-  font-size: 2rem;
-}
 #startButton {
   display: block;
   margin: 0 auto;
+  color: #fcfcfc;
+
 }
 
 .choice {
   display: block;
   margin-top: 10px;
 }
-.random-word {
+
+#Increase {
   font-size: 50px;
   text-align: center;
 }
 
 input {
   border: 0;
-  width: 350px;
-  font-family: "Libre Baskerville", serif;
+
   outline: 0;
-  background: #8cfdd9;
+  background: #986dd4;
   color: #391101;
   margin: 1rem 0;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   border-radius: 4px;
   transition: all 300ms ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 input:focus {
   background: rgb(219, 236, 251);
@@ -96,6 +94,13 @@ input:focus {
 .correct {
   background-color: rgb(70, 242, 144);
 }
+
+/* not sure what this is 
+.neutral {
+
+
+
+
 
 img {
   width: 90px;
@@ -109,19 +114,15 @@ img {
   transform: translate(-50%);
   background-color: var(--primary-clr);
   padding: 2rem;
-  font-size: 2rem;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #595c69;
   border-radius: 15px;
 }
 
 .score:hover {
-  background-color: #ed9a00;
-  color: white;
+  background-color: #75d461;
+  color: #fcfcfc;
   /* transform: scale(1.1); */
-  box-shadow: 0 0 10px #f4c700;
-}
-
+  box-shadow: 0 0 10px #595c69;
 .score img {
   margin: 0 20px 0 0;
 }
@@ -131,25 +132,43 @@ button {
   border: none;
   background-color: var(--primary-clr);
   padding: 0.5rem 1.2rem;
-  margin: 5px;
+
+  margin-top: 3px;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease;
-  font-size: 1.4rem;
-  font-weight: bold;
 }
 
 button:hover {
-  background-color: #ed9a00;
-  color: white;
+  background-color: #75d461;
+  color: #fcfcfc;
   transform: scale(1.1);
-  box-shadow: 0 0 10px #f4c700;
+  box-shadow: 0 0 10px #595c69;
 }
 
 button:focus {
   outline: 0;
 }
 
+
+::-moz-selection{
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+::selection{
+background-color: #695965;
+color: #fcfcfc;
+}
+
+.random-word{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-shadow: 0 0 5px #595c69;
+}
+
+.input-container{
+  color: #fcfcfc;
 .start-button {
   font-size: 2.3rem;
 }
