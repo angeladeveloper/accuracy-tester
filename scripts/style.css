@@ -6,19 +6,32 @@
 }
 
 body {
+<<<<<<< Updated upstream
   font-family: "Life Savers", cursive;
   background-color: grey;
   margin: 0;
 }
 
+=======
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  background-color: #595c69;
+  color: #fcfcfc;
+}
+>>>>>>> Stashed changes
 header {
   background-color: var(--primary-clr);
   margin: 1.3rem;
   border-radius: 10px;
+<<<<<<< Updated upstream
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 
+=======
+  box-shadow: 0 0 10px #595c69;
+}
+>>>>>>> Stashed changes
 section {
   position: relative;
   /* display: flex;
@@ -40,7 +53,14 @@ section {
 }
 h1 {
   text-align: center;
+<<<<<<< Updated upstream
   font-weight: bold;
+=======
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-shadow: 0 0 5px #595c69;
+>>>>>>> Stashed changes
 }
 
 p {
@@ -63,6 +83,10 @@ p {
 #startButton {
   display: block;
   margin: 0 auto;
+<<<<<<< Updated upstream
+=======
+  color: #fcfcfc;
+>>>>>>> Stashed changes
 }
 
 .choice {
@@ -97,10 +121,13 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
+<<<<<<< Updated upstream
 img {
   width: 90px;
 }
 
+=======
+>>>>>>> Stashed changes
 .score {
   display: flex;
   position: absolute;
@@ -119,9 +146,14 @@ img {
   background-color: #ed9a00;
   color: white;
   /* transform: scale(1.1); */
+<<<<<<< Updated upstream
   box-shadow: 0 0 10px #f4c700;
 }
 
+=======
+  box-shadow: 0 0 10px #595c69;
+}
+>>>>>>> Stashed changes
 .score img {
   margin: 0 20px 0 0;
 }
@@ -131,7 +163,11 @@ button {
   border: none;
   background-color: var(--primary-clr);
   padding: 0.5rem 1.2rem;
+<<<<<<< Updated upstream
   margin: 5px;
+=======
+  margin-top: 3px;
+>>>>>>> Stashed changes
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease;
@@ -150,6 +186,29 @@ button:focus {
   outline: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+::-moz-selection {
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+::selection {
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+.random-word {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-shadow: 0 0 5px #595c69;
+}
+
+.input-container {
+  color: #fcfcfc;
+}
+>>>>>>> Stashed changes
 .start-button {
   font-size: 2.3rem;
 }
@@ -163,6 +222,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  color: black;
   background-color: white;
   width: min-content;
   padding: 1rem;
@@ -228,6 +288,7 @@ form {
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
+  color: black;
   font-family: "Libre Baskerville", serif;
 }
 .correct-words-list p {
