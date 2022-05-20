@@ -62,7 +62,7 @@ function getRandomWordCall(length) {
             const randomWord = data;
             displayRandomWord(randomWord);
             // getPic(randomWord[0]);
-            // searchRandomPic(randomWord);
+            imagesearch(randomWord);
         })
         .catch('error')
     displayCorrectWords(newWordArray);
@@ -84,11 +84,12 @@ function imagesearch(randomWord) {
         const photo = data.photos;
         // displayimage(photo);
         var randomImage = photo[0].src.original
-        console.log(randomImage)
+        console.log(randomImage);
         document.querySelector('#image-container').innerHTML = `<img src=${randomImage} alt=${randomImage}>`
     })
     .catch(function(error) {
         console.log(error);
+        document.querySelector('#image-container').innerHTML = `<img src='https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg' alt='image not found'>`
     });
 }
 // get random word and store in local storage
