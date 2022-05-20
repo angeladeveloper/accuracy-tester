@@ -49,6 +49,7 @@ function getRandomWordCall(length) {
         document.querySelector("#user-guess").classList.add("neutral")
         userGuessTotal = 0;
         // displayCorrectWords(newWordArray);
+        window.location.replace('./high-score.html')
         return
     } else {
         rulesContainer.style.visibility = "hidden"
@@ -146,8 +147,8 @@ function compareWords(userWord, randomWord) {
         correctGuess()
         // add score here
     } else {
-        // window.clearInterval(update);
-        // return window.location.assign('high-score.html')
+        window.clearInterval(update);
+        return window.location.assign('../high-score.html')
         wrongGuess()
 
     }
