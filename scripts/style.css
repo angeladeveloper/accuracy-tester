@@ -171,6 +171,7 @@ button:focus {
   flex-direction: column;
   gap: 3px;
   background-color: white;
+  color: black;
   width: min-content;
   padding: 1rem;
   border-radius: 6px;
@@ -231,6 +232,7 @@ form {
   gap: 3px;
   background-color: white;
   width: max-content;
+  color: black;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
