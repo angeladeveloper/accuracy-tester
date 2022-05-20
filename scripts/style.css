@@ -9,13 +9,13 @@ body {
   font-size: larger;
   background-color: #595c69;
   color: #fcfcfc;
-
+}
 header {
   background-color: var(--primary-clr);
   margin: 1.3rem;
   border-radius: 10px;
   box-shadow: 0 0 10px #595c69;
-
+}
 
 section {
   position: relative;
@@ -37,11 +37,10 @@ section {
 }
 h1 {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 2px;
   word-spacing: 3px;
   text-shadow: 0 0 5px #595c69;
-
 }
 
 p {
@@ -61,7 +60,6 @@ p {
   display: block;
   margin: 0 auto;
   color: #fcfcfc;
-
 }
 
 .choice {
@@ -95,17 +93,6 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
-/* not sure what this is 
-.neutral {
-
-
-
-
-
-img {
-  width: 90px;
-}
-
 .score {
   display: flex;
   position: absolute;
@@ -123,6 +110,7 @@ img {
   color: #fcfcfc;
   /* transform: scale(1.1); */
   box-shadow: 0 0 10px #595c69;
+}
 .score img {
   margin: 0 20px 0 0;
 }
@@ -149,26 +137,26 @@ button:focus {
   outline: 0;
 }
 
-
-::-moz-selection{
+::-moz-selection {
   background-color: #695965;
   color: #fcfcfc;
 }
 
-::selection{
-background-color: #695965;
-color: #fcfcfc;
+::selection {
+  background-color: #695965;
+  color: #fcfcfc;
 }
 
-.random-word{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.random-word {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 2px;
   word-spacing: 1px;
   text-shadow: 0 0 5px #595c69;
 }
 
-.input-container{
+.input-container {
   color: #fcfcfc;
+}
 .start-button {
   font-size: 2.3rem;
 }
