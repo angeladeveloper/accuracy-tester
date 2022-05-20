@@ -121,7 +121,7 @@ function displayRandomWord(word) {
     randomWordEle.innerText = `🔉${word} ⬅️`
     setTimeout(() => {
         randomWordEle.innerText = "❓❔❓"
-    }, 200)
+    }, 500)
     userInputIEle.placeholder = "Enter Word...."
     userInputIEle.value = ""
     newWordArray.push(word[0])
