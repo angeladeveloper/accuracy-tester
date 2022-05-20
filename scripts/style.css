@@ -1,19 +1,20 @@
 /* Hiding sections minus title */
 :root {
-  --primary-clr: #67eac3;
+  --primary-clr: #9b6cd4;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
-  background-color: grey;
+  background-color: #595c69;
+  color: #fcfcfc;
 }
 
 header {
   background-color: var(--primary-clr);
   margin: 1.3rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #595c69;
 }
 
 section {
@@ -22,9 +23,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-  height: 80vh;
-  background-color: white;
-  border: solid 2px black;
+  height: 40vh;
+  background-color: #595c69;
   padding: 10px;
 }
 .hide {
@@ -36,6 +36,10 @@ section {
 }
 h1 {
   text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-shadow: 0 0 5px #595c69;
 }
 
 p {
@@ -54,6 +58,7 @@ p {
 #startButton {
   display: block;
   margin: 0 auto;
+  color: #fcfcfc;
 }
 
 .choice {
@@ -68,7 +73,7 @@ p {
 input {
   border: 0;
   outline: 0;
-  background: #8cfdd9;
+  background: #986dd4;
   color: #391101;
   margin: 1rem 0;
   font-size: 1.7rem;
@@ -85,9 +90,15 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
+/* not sure what this is 
 .neutral {
+<<<<<<< Updated upstream
   background-color: aliceblue;
 }
+=======
+  /* background-color: aliceblue;
+} */
+>>>>>>> Stashed changes
 
 img {
   width: 90px;
@@ -101,15 +112,15 @@ img {
   transform: translate(-50%);
   background-color: var(--primary-clr);
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #595c69;
   border-radius: 15px;
 }
 
 .score:hover {
-  background-color: #ed9a00;
-  color: white;
+  background-color: #75d461;
+  color: #fcfcfc;
   /* transform: scale(1.1); */
-  box-shadow: 0 0 10px #f4c700;
+  box-shadow: 0 0 10px #595c69;
 }
 
 .score img {
@@ -127,12 +138,33 @@ button {
 }
 
 button:hover {
-  background-color: #ed9a00;
-  color: white;
+  background-color: #75d461;
+  color: #fcfcfc;
   transform: scale(1.1);
-  box-shadow: 0 0 10px #f4c700;
+  box-shadow: 0 0 10px #595c69;
 }
 
 button:focus {
   outline: 0;
+}
+
+::-moz-selection{
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+::selection{
+background-color: #695965;
+color: #fcfcfc;
+}
+
+.random-word{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-shadow: 0 0 5px #595c69;
+}
+
+.input-container{
+  color: #fcfcfc;
 }
