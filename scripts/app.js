@@ -7,9 +7,11 @@ const difficultSelect = document.querySelector("select")
 const whatButton = document.querySelector("#what-button")
 const rulesContainer = document.querySelector(".rules")
 const correctWordsList = document.querySelector("#correct-ul")
+const highscoreInput = document.querySelector("#highscore-input")
 
 const API_KEY_PICS = '27501504-923f8173978218652c763b49a';
 
+const highscoreArray = JSON.parse(localStorage.getItem("scores")) || [];
 
 let diff = 4
 
@@ -45,8 +47,9 @@ function getDifficulty() {
 function getRandomWordCall(length) {
     if (userGuessTotal === 6) { // check to see if we need to end the game
         nextBtn.classList.add("hide");
-        rulesContainer.style.visibility = "visible"
-        document.querySelector("#user-guess").classList.add("neutral")
+        window.location.assign('high-score.html')
+        // rulesContainer.style.visibility = "visible"
+        // document.querySelector("#user-guess").classList.add("neutral")
         userGuessTotal = 0;
         // displayCorrectWords(newWordArray);
         return
@@ -147,7 +150,7 @@ function compareWords(userWord, randomWord) {
         // add score here
     } else {
         // window.clearInterval(update);
-        // return window.location.assign('high-score.html')
+        return
         wrongGuess()
 
     }
@@ -206,41 +209,36 @@ function clearElement(element) {
     }
 }
 
-// function getPic(picword) {
-//     console.log(picword);
-//     const random_PIC_URL = `https://pixabay.com/api/?key=${API_KEY_PICS}&q=${picword}&image_type=photo`;
-//     // https://pixabay.com/api/?key=27501504-923f8173978218652c763b49a&q=cask&image_type=photo
-//     https://pixabay.com/api/?key=27501504-923f8173978218652c763b49a&q=yellow+flowers&image_type=photo
-//     console.log(random_PIC_URL);
-//     fetch(random_PIC_URL)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             const randomPic = data.hits[0].previewURL;
-//             displayRandomPic(randomPic);
-//             console.log(`getpic`);
 
-//             // searchRandomPic(randomWord);
-//         })
-//         .catch('error')
+
+function updateHighScoreArray() {
+    const inputValue = highscoreInput.value
+    document.getElementById.querySelector("#highscore-header").innerHTML = `< header > FINAL SCORE: ${userScore}</header >`
+    let currentScore = `${inputValue}: ${userScore}`
+    console.log(currentScore);
+    highscoreArray.push(currentScore)
+    localStorage.setItem("score", JSON.stringify(highscoreArray));
+    displayHighscores(highscoreArray);
+}
+
+// document.querySelector("#submit-btn").addEventListener("submit", e => {
+//     e.preventDefault()
+//     const startBtn = document.createElement("button")
+//     startBtn.innerHTML = ` <button id="startButton" class="start-button">Start Quiz</button>`
+//     updateHighScoreArray()
+// })
+
+
+
+// function displayHighscorePage(array) {
+//     const highscoreList = document.querySelector("#highscore-ul")
+//     array.forEach(score => {
+//         const scoreLi = document.createElement("li")
+//         scoreLi.innerText = score;
+//         highscoreList.appendChild(scoreLi)
+
+//     })
 // }
-
-// function displayRandomPic(url) {
-//     const imageEle = document.querySelector("#image")
-//     imageEle.src = url
-//     console.log(`disppic`);
-
-// }
-
-
-// $.getJSON(URL, function (data) {
-//     if (parseInt(data.totalHits) > 0)
-//         $.each(data.hits, function (i, hit) { console.log(hit.pageURL); });
-//     else
-//         console.log('No hits');
-// });
-
-// https://pixabay.com/api/?key={ KEY }&q=yellow+flowers&image_type=photo
 
 
 // make it harder by not displaying a hint
