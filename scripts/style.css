@@ -1,5 +1,7 @@
 /* Hiding sections minus title */
 
+/* main page style*/
+
 :root {
   --primary-clr: #9b6cd4;
 }
@@ -200,6 +202,13 @@ button:focus {
   z-index: 2;
   display: flex;
   flex-direction: column;
+  gap: 3px;
+  background-color: white;
+  width: min-content;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #695965;
+  font-weight: bold;
   color: black;
   gap: 5px;
   background-color: white;
@@ -220,19 +229,21 @@ button:focus {
   outline: 0;
   background-color: none;
   border: none;
-  background-color: #f1cb8d;
+  background-color: #9b6cd4;
   font-size: 1.5rem;
   border-radius: 6px;
   height: 3rem;
   margin-top: 2px;
+  color: #fcfcfc;
 }
 
 .rules select:hover {
-  background-color: #cffff1;
+  background-color: #75d461;
+  color: #000000
 }
 
 .rules select:focus {
-  background-color: #cffff1;
+  background-color: #fcfcfc;
 }
 
 .rules span {
@@ -244,7 +255,8 @@ button:focus {
   background-color: var(--primary-clr);
   padding: 2px 5px;
   border-radius: 3px;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 5px #695965;
+  color: #fcfcfc;
 }
 
 form {
@@ -259,12 +271,16 @@ form {
   left: 70%;
   z-index: 2;
   isolation: isolate;
-  color: black;
   display: flex;
   flex-direction: column;
   gap: 3px;
-  background-color: white;
+  background-color: #fcfcfc;
   width: max-content;
+  color: #000000;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #695965;
+  font-weight: bold;
   color: black;
   padding: 1rem;
   border-radius: 6px;
@@ -283,8 +299,17 @@ form {
 
 option {
   font-size: 1.3rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* high-score page styling */
+.table {
+  color: #fcfcfc;
+  font-size: 35px;
+  text-shadow: 0 0 10px #695965;
+}
+
+
 
 @media (max-width: 500px) {
   h1,
