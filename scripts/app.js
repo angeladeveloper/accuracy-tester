@@ -150,7 +150,6 @@ function compareWords(userWord, randomWord) {
         // add score here
     } else {
         // window.clearInterval(update);
-        return
         wrongGuess()
 
     }
