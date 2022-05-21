@@ -1,5 +1,7 @@
 /* Hiding sections minus title */
 
+/* main page style*/
+
 :root {
   --primary-clr: #9b6cd4;
 }
@@ -182,13 +184,18 @@ color: #fcfcfc;
   display: flex;
   flex-direction: column;
   gap: 3px;
+<<<<<<< Updated upstream
   background-color: white;
+=======
+  background-color: #fcfcfc;
+  color: black;
+>>>>>>> Stashed changes
   width: min-content;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #695965;
   font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .rules h3 {
@@ -200,19 +207,21 @@ color: #fcfcfc;
   outline: 0;
   background-color: none;
   border: none;
-  background-color: #f1cb8d;
+  background-color: #9b6cd4;
   font-size: 1.5rem;
   border-radius: 6px;
   height: 3rem;
   margin-top: 2px;
+  color: #fcfcfc;
 }
 
 .rules select:hover {
-  background-color: #cffff1;
+  background-color: #75d461;
+  color: #000000
 }
 
 .rules select:focus {
-  background-color: #cffff1;
+  background-color: #fcfcfc;
 }
 
 .rules span {
@@ -224,7 +233,8 @@ color: #fcfcfc;
   background-color: var(--primary-clr);
   padding: 2px 5px;
   border-radius: 3px;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 5px #695965;
+  color: #fcfcfc;
 }
 
 form {
@@ -241,13 +251,17 @@ form {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  background-color: white;
+  background-color: #fcfcfc;
   width: max-content;
+<<<<<<< Updated upstream
+=======
+  color: #000000;
+>>>>>>> Stashed changes
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #695965;
   font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .correct-words-list p {
   list-style: none;
@@ -261,8 +275,17 @@ form {
 
 option {
   font-size: 1.3rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* high-score page styling */
+.table {
+  color: #fcfcfc;
+  font-size: 35px;
+  text-shadow: 0 0 10px #695965;
+}
+
+
 
 @media (max-width: 500px) {
   h1,
