@@ -1,22 +1,24 @@
 /* Hiding sections minus title */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Life+Savers:wght@400;700;800&display=swap");
+
+/* main page style*/
+
 :root {
-  --primary-clr: #67eac3;
-  --accent-clr: #cffff1;
+  --primary-clr: #9b6cd4;
 }
 
 body {
-  font-family: "Life Savers", cursive;
-  background-color: grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  background-color: #595c69;
+  color: #fcfcfc;
   margin: 0;
+  /* overflow: hidden; */
 }
-
 header {
   background-color: var(--primary-clr);
   margin: 1.3rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+  box-shadow: 0 0 10px #595c69;
 }
 
 section {
@@ -25,10 +27,9 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-  height: 95vh;
-  background-color: rgb(185, 185, 185);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 40vh;
+  background-color: #595c69;
+
   padding: 10px;
 }
 .hide {
@@ -40,7 +41,10 @@ section {
 }
 h1 {
   text-align: center;
-  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-shadow: 0 0 5px #595c69;
 }
 
 p {
@@ -51,41 +55,59 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: center;
-  text-align: center;
-  height: 350px;
+  /* text-align: center; */
+  height: min-content;
+  max-width: 700px;
+  margin: auto;
+  gap: 1rem;
+  border-radius: 3px;
+  background-color: #4d4f57;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(44, 44, 44, 0.3);
 }
 
-.input-container label {
-  font-size: 2rem;
-}
 #startButton {
   display: block;
   margin: 0 auto;
+  color: #fcfcfc;
 }
 
 .choice {
   display: block;
   margin-top: 10px;
 }
-.random-word {
+
+#Increase {
   font-size: 50px;
   text-align: center;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(227, 216, 238, 0.851);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(227, 216, 238, 0.851);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(227, 216, 238, 0.851);
+}
+
 input {
   border: 0;
-  width: 350px;
-  font-family: "Libre Baskerville", serif;
+  text-align: center;
   outline: 0;
-  background: #8cfdd9;
+  background: #986dd4;
   color: #391101;
   margin: 1rem 0;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   border-radius: 4px;
   transition: all 300ms ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 input:focus {
   background: rgb(219, 236, 251);
@@ -97,33 +119,33 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
-img {
-  width: 90px;
-}
-
-.score {
+.container .score {
+  background-color: rgb(209, 209, 209);
+  gap: 1rem;
+  height: min-content;
+  box-shadow: 0 0 10px #595c69;
+  width: 10rem;
+  margin: auto;
+  padding: 1rem 2.5rem;
   display: flex;
-  position: absolute;
-  /* top: 50; */
-  left: 50%;
-  transform: translate(-50%);
-  background-color: var(--primary-clr);
-  padding: 2rem;
-  font-size: 2rem;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 8px;
+  width: max-content;
 }
 
-.score:hover {
-  background-color: #ed9a00;
-  color: white;
+/* .score:hover {
+  background-color: #75d461;
+  color: #fcfcfc;
   /* transform: scale(1.1); */
-  box-shadow: 0 0 10px #f4c700;
-}
+/* box-shadow: 0 0 10px #595c69;
+} */
+img {
+  width: 50px;
 
+  box-shadow: 0 0 10px #595c69;
+}
 .score img {
   margin: 0 20px 0 0;
+
 }
 
 button {
@@ -131,25 +153,43 @@ button {
   border: none;
   background-color: var(--primary-clr);
   padding: 0.5rem 1.2rem;
-  margin: 5px;
+
+  margin-top: 3px;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease;
-  font-size: 1.4rem;
-  font-weight: bold;
 }
 
 button:hover {
-  background-color: #ed9a00;
-  color: white;
+  background-color: #75d461;
+  color: #fcfcfc;
   transform: scale(1.1);
-  box-shadow: 0 0 10px #f4c700;
+  box-shadow: 0 0 10px #595c69;
 }
 
 button:focus {
   outline: 0;
 }
 
+::-moz-selection {
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+::selection {
+  background-color: #695965;
+  color: #fcfcfc;
+}
+
+.random-word {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-shadow: 0 0 5px #595c69;
+}
+
+.input-container {
+  color: #fcfcfc;
+}
 .start-button {
   font-size: 2.3rem;
 }
@@ -167,9 +207,17 @@ button:focus {
   width: min-content;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #695965;
   font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  color: black;
+  gap: 5px;
+  background-color: white;
+  width: 400px;
+  color: black;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .rules h3 {
@@ -181,19 +229,21 @@ button:focus {
   outline: 0;
   background-color: none;
   border: none;
-  background-color: #f1cb8d;
+  background-color: #9b6cd4;
   font-size: 1.5rem;
   border-radius: 6px;
   height: 3rem;
   margin-top: 2px;
+  color: #fcfcfc;
 }
 
 .rules select:hover {
-  background-color: #cffff1;
+  background-color: #75d461;
+  color: #000000
 }
 
 .rules select:focus {
-  background-color: #cffff1;
+  background-color: #fcfcfc;
 }
 
 .rules span {
@@ -205,7 +255,8 @@ button:focus {
   background-color: var(--primary-clr);
   padding: 2px 5px;
   border-radius: 3px;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 5px #695965;
+  color: #fcfcfc;
 }
 
 form {
@@ -216,19 +267,25 @@ form {
 .correct-words-list {
   background-color: var(--accent-clr);
   position: absolute;
-  top: 20%;
-  right: 25%;
-  z-index: 1;
+  top: 50%;
+  left: 70%;
+  z-index: 2;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   gap: 3px;
-  background-color: white;
+  background-color: #fcfcfc;
   width: max-content;
+  color: #000000;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #695965;
+  font-weight: bold;
+  color: black;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .correct-words-list p {
   list-style: none;
@@ -242,8 +299,17 @@ form {
 
 option {
   font-size: 1.3rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* high-score page styling */
+.table {
+  color: #fcfcfc;
+  font-size: 35px;
+  text-shadow: 0 0 10px #695965;
+}
+
+
 
 @media (max-width: 500px) {
   h1,
