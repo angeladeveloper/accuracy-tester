@@ -117,14 +117,6 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
-/* .neutral {
-  left: 50%;
-  transform: translate(-50%);
-  background-color: var(--primary-clr);
-  padding: 2rem;
-  box-shadow: 0 0 10px #595c69;
-  border-radius: 15px;
-} */
 .container .score {
   background-color: rgb(209, 209, 209);
   gap: 1rem;
@@ -146,6 +138,12 @@ input:focus {
 } */
 img {
   width: 50px;
+
+  box-shadow: 0 0 10px #595c69;
+}
+.score img {
+  margin: 0 20px 0 0;
+
 }
 
 button {
@@ -206,6 +204,7 @@ button:focus {
   gap: 5px;
   background-color: white;
   width: 400px;
+  color: black;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -266,6 +265,7 @@ form {
   gap: 3px;
   background-color: white;
   width: max-content;
+  color: black;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
