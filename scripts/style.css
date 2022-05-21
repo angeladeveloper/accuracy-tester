@@ -9,6 +9,8 @@ body {
   font-size: larger;
   background-color: #595c69;
   color: #fcfcfc;
+  margin: 0;
+  /* overflow: hidden; */
 }
 header {
   background-color: var(--primary-clr);
@@ -52,8 +54,14 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 350px;
+  /* text-align: center; */
+  height: min-content;
+  max-width: 700px;
+  margin: auto;
+  gap: 1rem;
+  border-radius: 3px;
+  background-color: #4d4f57;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(44, 44, 44, 0.3);
 }
 
 #startButton {
@@ -72,9 +80,25 @@ p {
   text-align: center;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(227, 216, 238, 0.851);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(227, 216, 238, 0.851);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(227, 216, 238, 0.851);
+}
+
 input {
   border: 0;
-
+  text-align: center;
   outline: 0;
   background: #986dd4;
   color: #391101;
@@ -93,26 +117,33 @@ input:focus {
   background-color: rgb(70, 242, 144);
 }
 
-.score {
-  display: flex;
-  position: absolute;
-  /* top: 50; */
-  left: 50%;
-  transform: translate(-50%);
-  background-color: var(--primary-clr);
-  padding: 2rem;
+.container .score {
+  background-color: rgb(209, 209, 209);
+  gap: 1rem;
+  height: min-content;
   box-shadow: 0 0 10px #595c69;
-  border-radius: 15px;
+  width: 10rem;
+  margin: auto;
+  padding: 1rem 2.5rem;
+  display: flex;
+  border-radius: 8px;
+  width: max-content;
 }
 
-.score:hover {
+/* .score:hover {
   background-color: #75d461;
   color: #fcfcfc;
   /* transform: scale(1.1); */
+/* box-shadow: 0 0 10px #595c69;
+} */
+img {
+  width: 50px;
+
   box-shadow: 0 0 10px #595c69;
 }
 .score img {
   margin: 0 20px 0 0;
+
 }
 
 button {
@@ -169,15 +200,15 @@ button:focus {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  background-color: white;
   color: black;
-  width: min-content;
+  gap: 5px;
+  background-color: white;
+  width: 400px;
+  color: black;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .rules h3 {
@@ -224,9 +255,11 @@ form {
 .correct-words-list {
   background-color: var(--accent-clr);
   position: absolute;
-  top: 20%;
-  right: 25%;
-  z-index: 1;
+  top: 50%;
+  left: 70%;
+  z-index: 2;
+  isolation: isolate;
+  color: black;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -236,8 +269,7 @@ form {
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  font-family: "Libre Baskerville", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .correct-words-list p {
   list-style: none;
